@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Ustyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./Uindex.js"></script>
+    <title>UDP Flood</title>
+</head>
+<body>
+    <div class="login-page">
+        <form class="form" action="/udpattack" method="POST">
+          <div class="login-form">
+            <input id="ipadress" name="ip" type="text" placeholder="IP"/>
+            <input id="port" type="text" name="port" placeholder="PortNumber"/>
+            <div class=" timereturn badge bg-primary text-wrap fs-5 text" style="width: 8rem;">
+              Time:0
+            </div>
+            <input id="time" name="time" type="range" min="1" max="300" value="150"oninput="Timeval(this.value)">
+            <div class="Threadreturn badge bg-primary text-wrap fs-5 text" style="width: 8rem;">
+              Thread:0
+            </div>
+            <input id="thread" name="thread" type="range" min="1"max="200" value="100"oninput="Threadval(this.value)">
+            <!-- <input id="message" type="text" placeholder="Message"/> -->
+            <button id="btn" onclick="UDP_Flood()">Start!</button>
+
+            <button type="submit" class="btn btn-danger mt-3">Stop</button>
+            <p class="message">HTTP Flood를 이용하시려면     <a href="#">Click me</a></p>
+          </div>
+        </form>
+      </div>
+</body>
+</html>
